@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
 export default function useJsonFetch(url, ...opts) {
-
-    // const method = opts.method ? opts.method : 'GET'
-    // const interval = opts.interval ? opts.interval : 0;
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(true)
     const [hasError, setError] = useState(null)
@@ -25,6 +22,5 @@ export default function useJsonFetch(url, ...opts) {
             }
         })()
     }, [])
-
-    return [data, isLoading, hasError]
+    return [data, isLoading, hasError] 
 }
